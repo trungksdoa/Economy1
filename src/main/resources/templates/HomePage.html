@@ -20,5 +20,13 @@
 <footer>
     Copyright © 2022 My E-commerce Site
 </footer>
+<script>
+    const eventSource = new EventSource("/api/stream");
+    eventSource.onmessage = function(event) {
+        const data = event.data;
+        console.log(data);
+        // code để cập nhật giao diện với dữ liệu mới
+    };
+</script>
 </body>
 </html>
