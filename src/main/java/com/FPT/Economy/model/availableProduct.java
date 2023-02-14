@@ -19,8 +19,8 @@ public class availableProduct {
     private String name;
     private String description;
     private Integer price;
-    @Column("data_Created")
-    private String dataCreated;
+//    @Column("data_Created")
+//    private String dataCreated;
     @CreatedDate
     @Column("created_at")
     private LocalDateTime createdAt;
