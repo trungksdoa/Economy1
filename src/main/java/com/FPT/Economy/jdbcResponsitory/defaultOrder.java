@@ -15,6 +15,6 @@ public interface defaultOrder extends CrudRepository<availableProduct, Long> {
     Optional<availableProduct> findById(Long id);
 
     // truy xuất theo thứ tự mặc định (10 sản phẩm mới nhất)
-    @Query("SELECT * FROM available_product WHERE ")
+    @Query("SELECT * available_product ORDER BY data_Created DESC LIMIT 10")
     List<availableProduct> findAll();
 }
