@@ -21,7 +21,7 @@ public class availableProduct {
     private Integer price;
 //    @Column("data_Created")
 //    private String dataCreated;
-    //DATE_CREATED formated Y/M/D
+    //DATE_CREATED formated Year/Month/Day
     @CreatedDate
     @Column("created_at")
     private LocalDateTime createdAt;
