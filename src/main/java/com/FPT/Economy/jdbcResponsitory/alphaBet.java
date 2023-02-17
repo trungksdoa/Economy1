@@ -7,12 +7,12 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 import java.util.Optional;
 
-public interface orderResponsitory extends CrudRepository<availableProduct, Long> {
+public interface alphaBet extends CrudRepository<availableProduct, Long> {
 
     @Override
     Optional<availableProduct> findById(Long id);
 
-    // truy xuất theo thứ tự mặc định (10 sản phẩm mới nhất)
-    @Query("SELECT * available_product ORDER BY data_Created DESC LIMIT 10")
+    // truy xuất sản phẩm theo thứ tự A->Z của tên sản phẩm
+    @Query("SELECT * available_product ORDER BY name ASC")
     List<availableProduct> findAll();
-}   
+}
